@@ -1,22 +1,11 @@
 ﻿using Microsoft.Win32;
 using SeroTone.Objects;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using static SeroTone.Controls.GlobalVarController;
-
+using System.Configuration;
+using System.Text;
+using static SeroTone.Utils.Global;
+using static SeroTone.Controls.DynamicFormController;
+using static SeroTone.Controls.SettingsController;
 
 namespace SeroTone
 {
@@ -31,9 +20,29 @@ namespace SeroTone
         public MainWindow()
         {
             InitializeComponent();
+            InitializeSettingsController();
             Height = SystemParameters.PrimaryScreenHeight * 0.25;
             Width = SystemParameters.PrimaryScreenWidth * 0.25;
             //WriteTones(@"D:\dev\output\SeroTone\test.wav");
+
+            CreateDynamicControls();
+            string dynElem = Properties.Settings.Default.DynamicElements[0];
+            //byte[] gradStop1 = Properties.Settings.Default.GradientStopColor1;
+            SettingsPropertyCollection props = Properties.Settings.Default.Properties;
+            //props.Count
+
+            
+            //OutputB.Text = gradStop1.ToString();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var prop in props)
+            {
+                sb.Append(prop.ToString()).Append("; ");
+            }
+
+            OutputA.Text = "Properties.Settings.Default.DynamicElements[0] = " + Properties.Settings.Default.DynamicElements[0];
+            OutputB.Text = "Properties.Settings.Default.Properties.Count = " + Properties.Settings.Default.Properties.Count.ToString();
         }
 
 
@@ -111,6 +120,32 @@ namespace SeroTone
             //1: make sure input data is valid
             //2: make sure output selection is valid
             //3: make sure variables used in composition are valid 
+        }
+
+        private void CreateDynamicControls()
+        {
+
+
+
+            // add to the window
+            //AddChild(inputTB);
+            RootGrid.Children.Add(CreateFormElement(DYNAMIC_ELEMENTS[0]));
+        }
+
+        private void GradientShift()
+        {
+            /**
+             * On init:
+             * < GradientStop Color = "Black" Offset = "0.218" />
+             * < GradientStop Color = "#FF7E99FF" Offset = "0.367" />
+             * < GradientStop Color = "Black" />
+             * < GradientStop Color = "#FF7EFFA7" Offset = "0.474" />
+             * < GradientStop Color = "#FFFF7E98" Offset = "0.758" />
+             * < GradientStop Color = "#FFF5B6C3" Offset = "0.29" />
+             * < GradientStop Color = "#FFF5EFB6" Offset = "1" />
+             * */
+
+            //RadialGradientBrush rgb = TextBlock_InputData.Background.
         }
     }
 }

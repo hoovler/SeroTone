@@ -28,7 +28,7 @@ namespace SeroTone
 
         private void Button_SelectInput_New_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.Button
+            //MainWindow.Button
         }
     }
 }

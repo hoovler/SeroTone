@@ -9,7 +9,7 @@
     <Window.Background>
         <SolidColorBrush Color="#CC000000"/>
     </Window.Background>
-    <Grid>
+    <Grid Name="RootGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -57,48 +57,48 @@
                Grid.ColumnSpan="11" Margin="1,1,1,1" 
                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                Content="Specify input file..." FontStyle="Italic" Background="#DEE3E3E6" Click="Button_SelectInput_Click" />
-        
+
         <Button Name="Button_SelectOutput" Grid.Column="0" Grid.Row="1"
                Grid.ColumnSpan="11" Margin="1,1,1,1" 
                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                Content="Specify output file..." FontStyle="Italic" Background="#DEE3E3E6" Click="Button_SelectOutput_Click" />
 
         <Label Content="In 1:" Foreground="White"
-               Grid.Column="0" Grid.Row="2" Margin="1,1,1,1"/>
+               Grid.Column="0" Grid.Row="2" Margin="1,1,1,1" HorizontalContentAlignment="Right"/>
         <TextBox Name="TextBox_Input1" 
                  Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Margin="1,1,1,1"/>
         <Button Name="Button_Go1" Content="Go" Click="Button_Go1_Click"
                 Grid.Row="2" Grid.Column="5" Margin="1,1,1,1" Background="#DEC5CBDE" >
         </Button>
         <Label Content="Out 1:" Foreground="White"
-               Grid.Column="6" Grid.Row="2" Margin="1,1,1,1"/>
+               Grid.Column="6" Grid.Row="2" Margin="1,1,1,1" HorizontalContentAlignment="Right"/>
         <TextBox Name="TextBox_Output1" 
                  Grid.Column="7" Grid.Row="2" Grid.ColumnSpan="4" Margin="1,1,1,1"/>
 
         <Label Content="In 2:" Foreground="White"
-               Grid.Column="0" Grid.Row="3" Margin="1,1,1,1"/>
+               Grid.Column="0" Grid.Row="3" Margin="1,1,1,1" HorizontalContentAlignment="Right"/>
         <TextBox Name="TextBox_Input2" 
                  Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" Margin="1,1,1,1"/>
         <Button Name="Button_Go2" Content="Go" Click="Button_Go2_Click"
                 Grid.Row="3" Grid.Column="5" Margin="1,1,1,1" Background="#DEC5CBDE" >
         </Button>
         <Label Content="Out 2:" Foreground="White"
-               Grid.Column="6" Grid.Row="3" Margin="1,1,1,1"/>
+               Grid.Column="6" Grid.Row="3" Margin="1,1,1,1" HorizontalContentAlignment="Right"/>
         <TextBox Name="TextBox_Output2" 
                  Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="4" Margin="1,1,1,1"/>
 
         <Label Content="In 3:" Foreground="White"
-               Grid.Column="0" Grid.Row="4" Margin="1,1,1,1"/>
+               Grid.Column="0" Grid.Row="4" Margin="1,1,1,1" HorizontalContentAlignment="Right"/>
         <TextBox Name="TextBox_Input3" 
                  Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" Margin="1,1,1,1"/>
         <Button Name="Button_Go3" Content="Go" Click="Button_Go3_Click"
                 Grid.Row="4" Grid.Column="5" Margin="1,1,1,1" Background="#DEC5CBDE" >
         </Button>
         <Label Content="Out 3:" Foreground="White"
-               Grid.Column="6" Grid.Row="4" Margin="1,1,1,1"/>
+               Grid.Column="6" Grid.Row="4" Margin="1,1,1,1" HorizontalContentAlignment="Right"/>
         <TextBox Name="TextBox_Output3" 
                  Grid.Column="7" Grid.Row="4" Grid.ColumnSpan="4" Margin="1,1,1,1"/>
-        
+
 
         <Label Content="Var Name" Foreground="White" FontWeight="Bold" FontSize="14"
                HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="1" Grid.Row="5" />
@@ -108,9 +108,6 @@
                HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="3" Grid.Row="5" />
         <Label Content="Custom Val" Foreground="White" FontWeight="Bold" FontSize="14"
                HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="4" Grid.Row="5" />
-        <Label Content="Variable Significance / What it Does" Foreground="White" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="6"
-               HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Grid.Column="5" Grid.Row="5" />
-
 
         <Label Content="RIFF" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="6" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="6"  />
@@ -121,27 +118,27 @@
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="7"  />
         <Label Content="0x45564157" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="7" />
         <TextBox Name="Var2_WAVE" Grid.Column="4" Grid.Row="7" Margin="1,1,1,1" />
-        
+
         <Label Content="formatChunkSize" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="8" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="8"  />
         <Label Content="16" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="8" />
         <TextBox Name="Var3_FCS" Grid.Column="4" Grid.Row="8" Margin="1,1,1,1" />
-        
+
         <Label Content="headerSize" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="9" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="9"  />
         <Label Content="8" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="9" />
         <TextBox Name="Var4_HS" Grid.Column="4" Grid.Row="9" Margin="1,1,1,1" />
-        
+
         <Label Content="format" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="10" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="10"  />
         <Label Content="0x20746D66" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="10" />
         <TextBox Name="Var5_Format" Grid.Column="4" Grid.Row="10" Margin="1,1,1,1" />
-        
+
         <Label Content="formatType" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="11" />
         <Label Content="short" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="11"  />
         <Label Content="1" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="11" />
         <TextBox Name="Var6_FT" Grid.Column="4" Grid.Row="11" Margin="1,1,1,1" />
-        
+
         <Label Content="tracks" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="12" />
         <Label Content="short" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="12"  />
         <Label Content="1" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="12" />
@@ -151,22 +148,22 @@
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="13"  />
         <Label Content="44100" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="13" />
         <TextBox Name="Var8_SPS" Grid.Column="4" Grid.Row="13" Margin="1,1,1,1" />
-        
+
         <Label Content="bitsPerSample" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="14" />
         <Label Content="short" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="14"  />
         <Label Content="16" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="14" />
         <TextBox Name="Var9_BPS" Grid.Column="4" Grid.Row="14" Margin="1,1,1,1" />
-        
+
         <Label Content="waveSize" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="15" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="15"  />
         <Label Content="4" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="15" />
         <TextBox Name="Var10_WS" Grid.Column="4" Grid.Row="15" Margin="1,1,1,1" />
-        
+
         <Label Content="data" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="16" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="16"  />
         <Label Content="0x61746164" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="16" />
         <TextBox Name="Var11_Data" Grid.Column="4" Grid.Row="16" Margin="1,1,1,1" />
-        
+
         <Label Content="samples" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="17" />
         <Label Content="int" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="17"  />
         <Label Content="88200 * 4" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="17" />
@@ -176,23 +173,43 @@
         <Label Content="double" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="18"  />
         <Label Content="220.0" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="18" />
         <TextBox Name="Var13_aNat" Grid.Column="4" Grid.Row="18" Margin="1,1,1,1" />
-        
+
         <Label Content="ampl" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="19" />
         <Label Content="double" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="19"  />
         <Label Content="10000" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="19" />
         <TextBox Name="Var14_Ampl" Grid.Column="4" Grid.Row="19" Margin="1,1,1,1" />
-        
+
         <Label Content="perfect" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="20" />
         <Label Content="double" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="20"  />
         <Label Content="1.5" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="20" />
         <TextBox Name="Var15_Perfect" Grid.Column="4" Grid.Row="20" Margin="1,1,1,1" />
-        
+
         <Label Content="concert" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1" Grid.Row="21" />
         <Label Content="double" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="2" Grid.Row="21"  />
         <Label Content="1.498307077" Foreground="White" HorizontalContentAlignment="Center" Grid.Column="3" Grid.Row="21" />
         <TextBox Name="Var16_Concert" Grid.Column="4" Grid.Row="21" Margin="1,1,1,1" />
 
-        <Button Name="Button_Make" Content="Make Output" Margin="1,1,1,1" Grid.Column="5" Grid.Row="21" Background="#DEC5CBDE" Click="Button_Make_Click" />
+        <Button Name="Button_Make" Content="Make Output" Margin="1,1,1,1" Grid.Column="4" Grid.Row="22" Background="#DEC5CBDE" Click="Button_Make_Click" />
+
+        <Label Content="Output A:" Grid.Column="0" Grid.Row="23" Foreground="White" Margin="1,1,1,1" 
+               HorizontalContentAlignment="Right" />
+        <TextBlock Name="OutputA"  Grid.Column="1" Grid.Row="23" Foreground="White" Margin="1,1,1,1"
+                   Grid.ColumnSpan="4" FontSize="10"/>
+
+        <Label Content="Output B:" Grid.Column="0" Grid.Row="24" Foreground="White" Margin="1,1,1,1" 
+               HorizontalContentAlignment="Right" />
+        <TextBlock Name="OutputB"  Grid.Column="1" Grid.Row="24" Foreground="White" Margin="1,1,1,1"
+                   Grid.ColumnSpan="4" FontSize="10"/>
+
+        <Label Content="Output C:" Grid.Column="0" Grid.Row="25" Foreground="White" Margin="1,1,1,1" 
+               HorizontalContentAlignment="Right" />
+        <TextBlock Name="OutputC"  Grid.Column="1" Grid.Row="25" Foreground="White" Margin="1,1,1,1"
+                   Grid.ColumnSpan="4" FontSize="10"/>
+
+        <Label Content="Output D:" Grid.Column="0" Grid.Row="26" Foreground="White" Margin="1,1,1,1" 
+               HorizontalContentAlignment="Right" />
+        <TextBlock Name="OutputD"  Grid.Column="1" Grid.Row="26" Foreground="White" Margin="1,1,1,1"
+                   Grid.ColumnSpan="4" FontSize="10"/>
 
     </Grid>
 

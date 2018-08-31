@@ -8,22 +8,75 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SeroTone.Properties
-{
-
-
+namespace SeroTone.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-
-        public static Settings Default
-        {
-            get
-            {
+        
+        public static Settings Default {
+            get {
                 return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RenderNormal {
+            get {
+                return ((bool)(this["RenderNormal"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".wav")]
+        public string OutputSuffix {
+            get {
+                return ((string)(this["OutputSuffix"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>TextBlock_InputData</string>\r\n  <string>Another_Element</string>\r\n</ArrayO" +
+            "fString>")]
+        public global::System.Collections.Specialized.StringCollection DynamicElements {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["DynamicElements"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>0xFF, 0xFF, 0xFF, 0xFF</string>
+  <string>0xFF, 0x7E, 0xFF, 0xA7</string>
+  <string>0xFF, 0xFF, 0xFF, 0xFF</string>
+  <string>0xFF, 0x7E, 0xFF, 0xA7</string>
+  <string>0xFF, 0xFF, 0x7E, 0x98</string>
+  <string>0xFF, 0xF5, 0xB6, 0xC3</string>
+  <string>0xFF, 0xF5, 0xEF, 0xB6</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection GradStopColors {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["GradStopColors"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".218, .367, 0, .474, .758, .29, 1")]
+        public string GradStopOffsets {
+            get {
+                return ((string)(this["GradStopOffsets"]));
             }
         }
     }
