@@ -3,7 +3,7 @@ _**Data Visualization Accessibility for the Visually Impaired**_
 
 Today, humanity stands upon the brink of an infinite sea of information, wherein all the information mankind has produced -- from the beginning of recorded history to the present moment -- is available to anyone with an internet connection (and, in the minority of cases, the right authorization).  But what if you were locked out of this data bonanza?  What if, due to a significant impairment of your ability to see, you were unable to access, review, parse, understand, analyze, or enjoy any of it?
 
-**SeroTone** (the name for which was inspired by the [Dopamine](https://github.com/digimezzo/Dopamine) project) aims to help those with visual impairment who have a requirement understand various data visualizations by converting them into data _auditorizations_.
+**SeroTone** aims to help those with visual impairment who have a requirement understand various data visualizations by converting them into data _auditorizations_.
 
 ## Fundamental frequency Chart
 ### Hertz (MIDI note number)
